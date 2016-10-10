@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jxw.myapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".fragment.Fragment_home" />
+        <activity android:name=".fragment.Fragment_activity" />
+        <activity
+            android:name=".fragment.Fragment_info"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".fragment.Fragment_friend" />
+        <activity android:name=".fragment.Fragment_info_guys" />
+        <activity android:name=".fragment.Fragment_info_all" />
+        <activity android:name=".publishInfo.PublishInfo" />
+        <activity android:name=".fragment.one_activity" />
+        <activity android:name=".Main">
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jxw.myapp.publishInfo.PublishInfo">
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="30dp"
+        android:background="@color/navajowhite">
+        <ImageView
+            android:id="@+id/iv_cancelmore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/cancelmore"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="写写写"
+            android:textSize="20sp"
+            android:layout_marginLeft="122dp"
+            android:layout_marginTop="5dp"/>
+        <ImageView
+            android:id="@+id/iv_publishmore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/publishmore"
+            android:layout_marginLeft="150dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ll_head"
+        android:id="@+id/et_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:hint="说点什么吧..."
+        android:inputType="textMultiLine"
+        android:gravity="left|top"
+        android:minLines="6"
+        android:maxLines="20"
+        android:background="@null" />
+    <View
+        android:id="@+id/v_view"
+        android:layout_below="@+id/et_text"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#FF909090"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"/>
+    <ImageView
+        android:id="@+id/iv_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/addphoto"
+        android:layout_below="@+id/v_view"
+        android:layout_alignLeft="@+id/et_text"
+        android:layout_alignStart="@+id/et_text"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加照片"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/iv_imageView"
+        android:layout_toRightOf="@+id/iv_imageView"
+        android:layout_toEndOf="@+id/iv_imageView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+
+</RelativeLayout>

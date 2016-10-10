@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    tools:context="com.jxw.myapp.MainActivity">
+
+    <!-- 内容部分分为：各模块显示区域，模块导航tab -->
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 设置参照物，撑满整个页面（RelativeLayout） -->
+        <View
+            android:id="@+id/v_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#ff0000"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="60dp" />
+
+        <FrameLayout
+            android:id="@+id/fl_main_one"
+            android:layout_toRightOf="@+id/v_view"
+            android:layout_alignBottom="@+id/v_view"
+            android:background="#aaffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_five"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_home"
+                style="@style/RadioTab"
+                android:drawableTop="@drawable/home_selector"
+                android:text="首页"/>
+            <RadioButton
+                android:id="@+id/rb_sport"
+                style="@style/RadioTab"
+                android:drawableTop="@drawable/sport_selector"
+                android:text="场地"/>
+            <RadioButton
+                android:id="@+id/rb_activity"
+                style="@style/RadioTab"
+                android:drawableTop="@drawable/activity_selector"
+                android:text="活动"/>
+            <RadioButton
+                android:id="@+id/rb_info"
+                style="@style/RadioTab"
+                android:drawableTop="@drawable/info_selector"
+                android:text="动态"/>
+            <RadioButton
+                android:id="@+id/rb_friend"
+                style="@style/RadioTab"
+                android:drawableTop="@drawable/friend_selector"
+                android:text="好友"/>
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <!-- 菜单部分：通常是一个listview -->
+    <!-- 菜单部分   android:layout_gravity="left" 指定菜单滑出方向 -->
+    <ListView
+        android:id="@+id/lv_drawer_left"
+        android:layout_gravity="left"
+        android:background="#fff"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:layout_width="200dp"
+        android:layout_height="match_parent">
+    </ListView>
+</android.support.v4.widget.DrawerLayout>
